@@ -1,9 +1,9 @@
 import { useLocalStorage } from './useLocalStorage.js'
 import { useEffect } from 'react';
 
-export const useDarkMode = (key) => {
+export const useDarkMode = (key, initialValues) => {
 
-    const [darkMode, setDarkMode] = useLocalStorage(key)
+    const [darkMode, setDarkMode] = useLocalStorage(key, initialValues)
 
     useEffect(() => {
         if (darkMode === true) {
